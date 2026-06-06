@@ -2,7 +2,6 @@ services:
   backend:
     build:
       context: ./backend
-    container_name: effective-backend
     expose:
       - "8080"
     networks:
@@ -17,7 +16,6 @@ services:
 
   nginx:
     image: nginx:alpine
-    container_name: effective-nginx
     ports:
       - "80:80"
     volumes:
