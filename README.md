@@ -4,7 +4,7 @@ A containerized web architecture using Docker and Docker Compose. The setup incl
 
 The backend is intentionally not exposed to the host system to enforce service isolation. Nginx acts as the single entry point.
 
----
+
 
 ## Architecture
 
@@ -18,7 +18,7 @@ Client (Browser / curl)
 Backend Service (Python HTTP Server — Port 8080, internal only)
 ```
 
----
+
 
 ## Project Structure
 
@@ -33,7 +33,7 @@ devops-task/
 └── README.md
 ```
 
----
+
 
 ## Getting Started
 
@@ -49,7 +49,7 @@ git clone github.com/s3koni/devops-task && cd devops-task
 docker compose up --build -d
 ```
 
----
+
 
 ## Testing
 
@@ -77,7 +77,7 @@ Expected output:
 curl: (7) Failed to connect to localhost port 8080 after 0 ms: Could not connect to server
 ```
 
----
+
 
 ## Service Communication Flow
 
@@ -86,7 +86,7 @@ curl: (7) Failed to connect to localhost port 8080 after 0 ms: Could not connect
 3. Nginx proxies the request to the backend via the internal Docker network
 4. Backend responds with `Hello from Effective Mobile!`
 
----
+
 
 ## Design Constraints
 
@@ -96,7 +96,7 @@ curl: (7) Failed to connect to localhost port 8080 after 0 ms: Could not connect
 - No hardcoded IP addresses
 - Nginx reverse proxy configuration is kept separate
 
----
+
 
 ## Health Check
 
@@ -110,7 +110,7 @@ Expected output:
 healthy
 ```
 
----
+
 
 ## Cleanup
 
@@ -120,7 +120,7 @@ Stop and remove all containers:
 docker compose down
 ```
 
----
+
 
 ## Author
 
